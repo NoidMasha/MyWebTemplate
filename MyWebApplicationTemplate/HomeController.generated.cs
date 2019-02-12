@@ -95,7 +95,9 @@ namespace MyWebApplicationTemplate.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
+                public readonly string Index = "Index";
             }
+            public readonly string Index = "~/Views/Home/Index.cshtml";
         }
     }
 
