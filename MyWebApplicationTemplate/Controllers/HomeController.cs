@@ -13,5 +13,15 @@ namespace MyWebApplicationTemplate.Controllers
         {
             return View();
         }
+
+        public virtual ViewResult Contact()
+        {
+            return View();
+        }
+
+        public virtual ViewResult About()
+        {
+            return View();
+        }
     }
 }

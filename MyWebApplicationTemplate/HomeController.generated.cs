@@ -76,12 +76,16 @@ namespace MyWebApplicationTemplate.Controllers
         public class ActionNamesClass
         {
             public readonly string Index = "Index";
+            public readonly string Contact = "Contact";
+            public readonly string About = "About";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
             public const string Index = "Index";
+            public const string Contact = "Contact";
+            public const string About = "About";
         }
 
 
@@ -95,8 +99,12 @@ namespace MyWebApplicationTemplate.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
+                public readonly string About = "About";
+                public readonly string Contact = "Contact";
                 public readonly string Index = "Index";
             }
+            public readonly string About = "~/Views/Home/About.cshtml";
+            public readonly string Contact = "~/Views/Home/Contact.cshtml";
             public readonly string Index = "~/Views/Home/Index.cshtml";
         }
     }
@@ -114,6 +122,28 @@ namespace MyWebApplicationTemplate.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
             IndexOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void ContactOverride(T4MVC_System_Web_Mvc_ViewResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ViewResult Contact()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ViewResult(Area, Name, ActionNames.Contact);
+            ContactOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void AboutOverride(T4MVC_System_Web_Mvc_ViewResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ViewResult About()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ViewResult(Area, Name, ActionNames.About);
+            AboutOverride(callInfo);
             return callInfo;
         }
 

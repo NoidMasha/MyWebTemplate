@@ -48,8 +48,10 @@ namespace T4MVC
                 public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
                 public class _ViewNamesClass
                 {
+                    public readonly string _Default = "_Default";
                     public readonly string _Home = "_Home";
                 }
+                public readonly string _Default = "~/Views/Shared/Layouts/_Default.cshtml";
                 public readonly string _Home = "~/Views/Shared/Layouts/_Home.cshtml";
             }
             static readonly _PartialViewsClass s_PartialViews = new _PartialViewsClass();
@@ -61,7 +63,11 @@ namespace T4MVC
                 public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
                 public class _ViewNamesClass
                 {
+                    public readonly string _DisplayFooter = "_DisplayFooter";
+                    public readonly string _DisplayNavbar = "_DisplayNavbar";
                 }
+                public readonly string _DisplayFooter = "~/Views/Shared/PartialViews/_DisplayFooter.cshtml";
+                public readonly string _DisplayNavbar = "~/Views/Shared/PartialViews/_DisplayNavbar.cshtml";
             }
         }
     }
